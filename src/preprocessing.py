@@ -4,6 +4,14 @@ import numpy as np
 
 def pad_spectrogram(spec, max_len=256):
 
+    # ------------------------------------------------------
+    # pad_spectrogram()
+    # ------------------------------------------------------
+    # Purpose:
+
+    # Make sure every spectrogram has the same time length (max_len=256).
+    # Neural networks don’t like variable-size inputs.
+    
     if spec is None:
         logging.error("Spec is None")
         return None
@@ -26,6 +34,13 @@ def pad_spectrogram(spec, max_len=256):
 
 def normalize_spectrogram(spec):
 
+    # ------------------------------------------------------
+    # normalize_spectrogram()
+    # ------------------------------------------------------
+    # Purpose:
+
+    # Convert each spectrogram to values between 0 and 1.
+
     if spec is None:
         logging.error("Spec is None")
         return None
@@ -41,7 +56,18 @@ def normalize_spectrogram(spec):
 
 
 def prepare_dataset(X, y, max_len=256):
+    # ------------------------------------------------------
+    # prepare_dataset()
+    # ------------------------------------------------------
+    # Purpose:
 
+    # Pad all spectrograms
+
+    # Normalize them
+
+    # Convert to numpy arrays
+
+    # Pack labels
     if X is None or y is None:
         logging.error("X or y value is None")
         return None, None
