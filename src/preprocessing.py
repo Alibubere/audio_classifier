@@ -39,3 +39,37 @@ def normalize_spectrogram(spec):
 
     return (spec - min_val) / (max_val - min_val)
 
+
+def prepare_dataset(X, y, max_len=256):
+
+    if X is None or y is None:
+        logging.error("X or y value is None")
+        return None, None
+    
+    processed_X = []
+
+    try:
+        for spec in X:
+
+            padded = pad_spectrogram(spec, max_len)
+
+            if padded is None:
+                logging.warning("Skipping invalid spectrogram")
+                continue
+
+            normalized = normalize_spectrogram(padded)
+
+            if normalized is None:
+                logging.warning("Skipping normalization failed")
+                continue
+
+            processed_X.append(normalized)
+
+        processed_X = np.array(processed_X)
+        processed_y = np.array(y)        
+
+        return processed_X, processed_y
+
+    except Exception as e:
+        logging.exception(e)
+        return None, None
