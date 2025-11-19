@@ -16,6 +16,8 @@ def load_metadata(csv_path):
 
     df = pd.read_csv(csv_path)
 
+    logging.info(f"CSV file load successfully from :{csv_path}")
+
     return df
 
 
