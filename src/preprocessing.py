@@ -94,6 +94,8 @@ def prepare_dataset(X, y, max_len=256):
         processed_X = np.array(processed_X)
         processed_y = np.array(y)
 
+        logging.info("Dataset is prepared successfully")
+
         return processed_X, processed_y
 
     except Exception as e:

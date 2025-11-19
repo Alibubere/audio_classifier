@@ -35,36 +35,42 @@ def load_dataset(data_dir, metadata_df):
         logging.error("Meta is None")
         return None, None
 
-    required_cols = ["slice_file_name", "fold", "classID"]
+    try:
+        required_cols = ["slice_file_name", "fold", "classID"]
 
-    for cols in required_cols:
-        if cols not in metadata_df.columns:
-            logging.error(f"Missing required columns {cols}")
-            return None, None
+        for cols in required_cols:
+            if cols not in metadata_df.columns:
+                logging.error(f"Missing required columns {cols}")
+                return None, None
 
-    X = []
-    y = []
+        X = []
+        y = []
 
-    for index, row in metadata_df.iterrows():
-        file_name = row["slice_file_name"]
-        fold = row["fold"]
-        label = row["classID"]
+        for index, row in metadata_df.iterrows():
+            file_name = row["slice_file_name"]
+            fold = row["fold"]
+            label = row["classID"]
 
-        full_path = os.path.join(data_dir, f"fold{fold}", file_name)
+            full_path = os.path.join(data_dir, f"fold{fold}", file_name)
 
-        audio, sr = load_audio(full_path)
+            audio, sr = load_audio(full_path)
 
-        if audio is None:
-            logging.warning(f"Skipping file: {full_path}")
-            continue
+            if audio is None:
+                logging.warning(f"Skipping file: {full_path}")
+                continue
 
-        s_db = extract_mel_spectrogram(audio, sr)
+            s_db = extract_mel_spectrogram(audio, sr)
 
-        if s_db is None:
-            logging.warning(f"Failed to process spectrogram :{full_path}")
-            continue
+            if s_db is None:
+                logging.warning(f"Failed to process spectrogram :{full_path}")
+                continue
 
-        X.append(s_db)
-        y.append(label)
+            X.append(s_db)
+            y.append(label)
 
-    return X, y
+        logging.info("Raw data loaded Successfully")
+
+        return X, y
+
+    except Exception as e:
+        logging.exception("Failed to load dataset")
