@@ -2,7 +2,7 @@ import logging
 import numpy as np
 
 
-def pad_spectrogram(spec, max_len=256):
+def pad_spectrogram(spec, max_len=512):
 
     # ------------------------------------------------------
     # pad_spectrogram()
@@ -55,7 +55,7 @@ def normalize_spectrogram(spec):
     return (spec - min_val) / (max_val - min_val)
 
 
-def prepare_dataset(X, y, max_len=256):
+def prepare_dataset(X, y, max_len=512):
     # ------------------------------------------------------
     # prepare_dataset()
     # ------------------------------------------------------

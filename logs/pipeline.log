@@ -27,3 +27,32 @@ TypeError: melspectrogram() takes 0 positional arguments but 1 positional argume
 2025-11-19 12:54:26,298 - INFO - Starting model training ....
 2025-11-19 12:58:42,149 - INFO - Model trained successfully
 2025-11-19 12:58:42,308 - INFO - Model saved successfully
+2025-11-19 14:27:13,226 - INFO - logging setup successfully
+2025-11-19 14:27:13,236 - INFO - CSV file load successfully from :data/UrbanSound8K/metadata/UrbanSound8K.csv
+2025-11-19 14:29:10,396 - INFO - Raw data loaded Successfully
+2025-11-19 14:29:13,430 - INFO - Dataset is prepared successfully
+2025-11-19 14:29:13,437 - INFO - Model building Started successfully
+2025-11-19 14:29:15,234 - INFO - Model building was successful
+2025-11-19 14:29:15,234 - INFO - Starting model training ....
+2025-11-19 14:35:19,522 - INFO - Model trained successfully
+2025-11-19 14:35:19,884 - INFO - Model saved successfully
+2025-11-19 15:00:37,872 - INFO - logging setup successfully
+2025-11-19 15:00:37,881 - INFO - CSV file load successfully from :data/UrbanSound8K/metadata/UrbanSound8K.csv
+2025-11-19 15:02:03,112 - INFO - Raw data loaded Successfully
+2025-11-19 15:02:05,278 - INFO - Dataset is prepared successfully
+2025-11-19 15:02:05,485 - INFO - Dataset is prepared successfully
+2025-11-19 15:02:05,682 - INFO - Dataset is prepared successfully
+2025-11-19 15:02:05,682 - INFO - Model building Started successfully
+2025-11-19 15:02:06,951 - INFO - Model building was successful
+2025-11-19 15:02:06,951 - INFO - Starting model training....
+2025-11-19 15:21:07,163 - INFO - Model trained successfully
+2025-11-19 15:21:07,282 - INFO - Model saved successfully
+2025-11-19 15:24:51,343 - INFO - logging setup successfully
+2025-11-19 15:24:51,352 - INFO - CSV file load successfully from :data/UrbanSound8K/metadata/UrbanSound8K.csv
+2025-11-19 15:26:51,537 - INFO - Raw data loaded Successfully
+2025-11-19 15:26:53,646 - INFO - Dataset is prepared successfully
+2025-11-19 15:26:53,646 - INFO - Model building Started successfully
+2025-11-19 15:26:54,919 - INFO - Model building was successful
+2025-11-19 15:26:54,919 - INFO - Starting model training ....
+2025-11-19 15:31:31,939 - INFO - Model trained successfully
+2025-11-19 15:31:32,203 - INFO - Model saved successfully

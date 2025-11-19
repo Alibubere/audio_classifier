@@ -74,3 +74,4 @@ def load_dataset(data_dir, metadata_df):
 
     except Exception as e:
         logging.exception("Failed to load dataset")
+        return None , None

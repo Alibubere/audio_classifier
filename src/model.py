@@ -14,31 +14,40 @@ def build_model(input_shape, num_classes):
 
     try:
         logging.info("Model building Started successfully")
-        
+
         model = Sequential(
             [
                 # Batch 1
                 Conv2D(
-                    32, (3, 3), input_shape=input_shape, padding="same", activation="relu"
+                    32,
+                    (3, 3),
+                    input_shape=input_shape,
+                    padding="same",
+                    activation="relu",
                 ),
                 BatchNormalization(),
                 MaxPooling2D(pool_size=(2, 2)),
-                Dropout(0.25),
+                Dropout(0.1),
                 # Batch 2
                 Conv2D(64, (3, 3), padding="same", activation="relu"),
                 BatchNormalization(),
                 MaxPooling2D(pool_size=(2, 2)),
-                Dropout(0.25),
+                Dropout(0.2),
                 # Batch 3
                 Conv2D(128, (3, 3), padding="same", activation="relu"),
                 BatchNormalization(),
                 MaxPooling2D(pool_size=(2, 2)),
-                Dropout(0.25),
+                Dropout(0.3),
                 # Batch 4
                 Conv2D(256, (3, 3), padding="same", activation="relu"),
                 BatchNormalization(),
                 MaxPooling2D(pool_size=(2, 2)),
-                Dropout(0.25),
+                Dropout(0.35),
+                # Batch 5
+                Conv2D(512, (3, 3), padding="same", activation="relu"),
+                BatchNormalization(),
+                MaxPooling2D(pool_size=(2, 2)),
+                Dropout(0.4),
                 Flatten(),
                 Dense(128, activation="relu"),
                 Dropout(0.5),
@@ -47,12 +56,14 @@ def build_model(input_shape, num_classes):
         )
 
         model.compile(
-            optimizer="adam", loss="sparse_categorical_crossentropy", metrics=["accuracy"]
+            optimizer="adam",
+            loss="sparse_categorical_crossentropy",
+            metrics=["accuracy"],
         )
-        
+
         logging.info("Model building was successful")
-        
+
         return model
 
-    except Exception as e :
+    except Exception as e:
         logging.exception("Failed to build the model")
