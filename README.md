@@ -217,7 +217,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Ali Muin**
 - 📧 Email: [alibubere989@gmail.com](mailto:alibubere989@gmail.com)
-- 🐙 GitHub: [Alibuere](https://github.com/Alibubere)
+- 🐙 GitHub: [Alibubere](https://github.com/Alibubere)
 - 💼 LinkedIn: [Mohammad Ali Bubere](https://www.linkedin.com/in/mohammad-ali-bubere-a6b830384/)
 
 
