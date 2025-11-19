@@ -15,8 +15,6 @@ def load_audio(path, sr=22050):
 
     audio, sr = librosa.load(path, sr=sr)
 
-    logging.info("Audio loaded successfully")
-
     return audio, sr
 
 
@@ -26,7 +24,7 @@ def extract_mel_spectrogram(audio, sr, n_mels=128):
         logging.error("Invalid audio or sample rate.")
         return None
 
-    S = librosa.feature.melspectrogram(audio, sr=sr, n_mels=n_mels)
+    S = librosa.feature.melspectrogram(y=audio, sr=sr, n_mels=n_mels)
 
     S_db = librosa.power_to_db(S)
 

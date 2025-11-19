@@ -1,2 +1,29 @@
 2025-11-19 12:11:19,839 - INFO - logging setup successfully
 2025-11-19 12:11:19,839 - INFO - main
+2025-11-19 12:42:41,549 - INFO - logging setup successfully
+2025-11-19 12:42:41,574 - INFO - CSV file load successfully from :data/UrbanSound8K/metadata/UrbanSound8K.csv
+2025-11-19 12:43:15,009 - INFO - Audio loaded successfully
+2025-11-19 12:43:16,091 - ERROR - Failed to load dataset
+Traceback (most recent call last):
+  File "C:\Users\MUIN\Desktop\Ali\audio_classifier\src\data_loader.py", line 62, in load_dataset
+    s_db = extract_mel_spectrogram(audio, sr)
+  File "C:\Users\MUIN\Desktop\Ali\audio_classifier\src\feature_extractor.py", line 29, in extract_mel_spectrogram
+    S = librosa.feature.melspectrogram(audio, sr=sr, n_mels=n_mels)
+TypeError: melspectrogram() takes 0 positional arguments but 1 positional argument (and 1 keyword-only argument) were given2025-11-19 12:46:00,450 - INFO - logging setup successfully
+2025-11-19 12:46:00,459 - INFO - CSV file load successfully from :data/UrbanSound8K/metadata/UrbanSound8K.csv
+2025-11-19 12:47:43,263 - INFO - Raw data loaded Successfully
+2025-11-19 12:47:45,251 - INFO - Dataset is prepared successfully
+2025-11-19 12:47:45,251 - INFO - Model building Started successfully
+2025-11-19 12:47:46,758 - INFO - Model building was successful
+2025-11-19 12:47:46,758 - INFO - Starting model training ....
+2025-11-19 12:51:17,802 - INFO - Model trained successfully
+2025-11-19 12:51:17,980 - INFO - Model saved successfully
+2025-11-19 12:52:57,097 - INFO - logging setup successfully
+2025-11-19 12:52:57,106 - INFO - CSV file load successfully from :data/UrbanSound8K/metadata/UrbanSound8K.csv
+2025-11-19 12:54:22,897 - INFO - Raw data loaded Successfully
+2025-11-19 12:54:24,862 - INFO - Dataset is prepared successfully
+2025-11-19 12:54:24,866 - INFO - Model building Started successfully
+2025-11-19 12:54:26,298 - INFO - Model building was successful
+2025-11-19 12:54:26,298 - INFO - Starting model training ....
+2025-11-19 12:58:42,149 - INFO - Model trained successfully
+2025-11-19 12:58:42,308 - INFO - Model saved successfully
